@@ -22,6 +22,11 @@ ul {
   padding: 0;
 }
 
+.inverted {
+  background-color: #333333;
+  color: #ffffff;
+}
+
 header,
 section {
   text-align: center;
