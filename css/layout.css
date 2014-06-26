@@ -43,6 +43,10 @@ section {
 .love {
   background-color: #f7f7f7; }
 
+.perks {
+  background: url(../img/palm_photo.png) top center no-repeat;
+  background-size: cover; }
+
 .perks .perk {
   margin-bottom: 2.5rem;
   margin-top: 2.5rem; }
