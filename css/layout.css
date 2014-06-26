@@ -12,6 +12,13 @@ h1 {
 h2 {
   font-size: 2rem; }
 
+p {
+  margin-bottom: 1.5rem; }
+
+a {
+  color: #1baece;
+  text-decoration: none; }
+
 ul {
   list-style: none;
   margin: 0;
@@ -29,3 +36,6 @@ section {
 section {
   padding-bottom: 3rem;
   padding-top: 3rem; }
+
+.love {
+  background-color: #f7f7f7; }

@@ -1,5 +1,7 @@
 $bg-color: #ffffff;
 $font-color: #333333;
+$link-color: #1baece;
+$link-hover-color: #1baece;
 
 body {
   background-color: $bg-color;
@@ -17,6 +19,15 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1.5rem
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
 }
 
 ul {
@@ -39,4 +50,8 @@ section {
 section {
   padding-bottom: 3rem;
   padding-top: 3rem;
+}
+
+.love {
+  background-color: #f7f7f7;
 }
