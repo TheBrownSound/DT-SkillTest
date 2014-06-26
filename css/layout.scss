@@ -36,6 +36,10 @@ ul {
   padding: 0;
 }
 
+li {
+  margin-bottom: 1rem;
+}
+
 .inverted {
   background-color: $font-color;
   color: $bg-color;

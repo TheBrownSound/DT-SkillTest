@@ -24,6 +24,9 @@ ul {
   margin: 0;
   padding: 0; }
 
+li {
+  margin-bottom: 1rem; }
+
 .inverted {
   background-color: #333333;
   color: white; }
