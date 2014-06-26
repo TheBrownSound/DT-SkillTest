@@ -40,6 +40,14 @@ li {
   margin-bottom: 1rem;
 }
 
+blockquote:before {
+  content: "\201C";
+}
+
+blockquote:after {
+  content: "\201D";
+}
+
 .inverted {
   background-color: $font-color;
   color: $bg-color;

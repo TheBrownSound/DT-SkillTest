@@ -27,6 +27,12 @@ ul, li, dl, dt, dd {
 li {
   margin-bottom: 1rem; }
 
+blockquote:before {
+  content: "\201C"; }
+
+blockquote:after {
+  content: "\201D"; }
+
 .inverted {
   background-color: #333333;
   color: white; }
