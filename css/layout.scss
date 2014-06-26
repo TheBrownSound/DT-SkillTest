@@ -30,7 +30,7 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul, li, dl, dt, dd {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -58,4 +58,14 @@ section {
 
 .love {
   background-color: #f7f7f7;
+}
+
+.perks .perk {
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.perk dt {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
 }
