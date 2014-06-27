@@ -42,9 +42,12 @@ blockquote:after {
   color: white; }
 
 .constrain {
-  max-width: 47.5rem;
+  max-width: 52rem;
   margin-left: auto;
   margin-right: auto; }
+
+.portrait {
+  border-radius: 50%; }
 
 header,
 section {
@@ -73,6 +76,22 @@ header {
 .team {
   background: url(../img/office_meeting.png) center center no-repeat;
   background-size: cover; }
+  .team .quote {
+    display: none; }
+    .team .quote blockquote {
+      font-size: 2.4rem;
+      font-weight: 100;
+      margin-bottom: 3rem;
+      margin-top: 6rem; }
+    .team .quote .author * {
+      margin: 0 auto 1rem;
+      display: block; }
+    .team .quote .author .name {
+      text-transform: uppercase; }
+    .team .quote .author .title {
+      font-weight: 100; }
+  .team .quote.active {
+    display: block; }
 
 .details h2 em {
   font-weight: 100; }
