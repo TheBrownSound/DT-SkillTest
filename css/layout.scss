@@ -53,15 +53,36 @@ blockquote:after {
   color: $bg-color;
 }
 
+.constrain {
+  max-width: 47.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 header,
 section {
   text-align: center;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
   width: 100%;
 }
 
-section {
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+header {
+  padding-top: 2.3rem;
+  nav {
+    text-align: left;
+    .menu {
+      float: right;
+    }
+  }
+  h1.ux-designer:before {
+    content: url(../img/brush_cup.png);
+    display: block;
+    margin: 1.2rem auto;
+    padding: 0.9rem;
+    width: 200px;
+    border-bottom: 2px solid $font-color;
+  }
 }
 
 .love {
