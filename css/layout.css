@@ -50,16 +50,14 @@ section {
   background-color: #f7f7f7; }
 
 .perks {
-  background: url(../img/palm_photo.png) top center no-repeat;
+  background: url(../img/palm_tree.png) top center no-repeat;
   background-size: cover; }
-
-.perks .perk {
-  margin-bottom: 2.5rem;
-  margin-top: 2.5rem; }
-
-.perk dt {
-  font-weight: 600;
-  margin-bottom: 0.7rem; }
+  .perks .perk {
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem; }
+    .perks .perk dt {
+      font-weight: 600;
+      margin-bottom: 0.7rem; }
 
 .apply .job-link {
   border: 1px solid #1f1f1f;

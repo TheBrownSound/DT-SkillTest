@@ -69,22 +69,22 @@ section {
 }
 
 .perks {
-  background: url(../img/palm_photo.png) top center no-repeat;
+  background: url(../img/palm_tree.png) top center no-repeat;
   background-size: cover;
+  .perk {
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    dt {
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+  }
 }
 
-.perks .perk {
-  margin-bottom: 2.5rem;
-  margin-top: 2.5rem;
-}
-
-.perk dt {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.apply .job-link {
-  border: 1px solid #1f1f1f;
-  display: inline-block;
-  padding: 1rem 2.5rem;
+.apply{
+  .job-link {
+    border: 1px solid #1f1f1f;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+  }
 }
