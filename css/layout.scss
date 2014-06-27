@@ -93,12 +93,51 @@ header {
   background: url(../img/palm_tree.png) top center no-repeat;
   background-size: cover;
   .perk {
+    background-repeat: no-repeat;
+    background-position: top center;
     margin-bottom: 2.5rem;
     margin-top: 2.5rem;
+    padding-top: 5rem;
     dt {
       font-weight: 600;
       margin-bottom: 0.7rem;
     }
+  }
+  .health {
+    background-image: url(../img/medic.png);
+  }
+  .retirement {
+    background-image: url(../img/pig.png);
+  }
+  .travel {
+    background-image: url(../img/scooter.png);
+  }
+  .vacation {
+    background-image: url(../img/beach.png);
+  }
+  .lunch {
+    background-image: url(../img/cutlery.png);
+  }
+  .bonus {
+    background-image: url(../img/cash.png);
+  }
+  .dental-vision {
+    background-image: url(../img/glasses.png);
+  }
+  .growth {
+    background-image: url(../img/column.png);
+  }
+  .snacks {
+    background-image: url(../img/fruit.png);
+  }
+  .beer {
+    background-image: url(../img/beer.png);
+  }
+  .coffee {
+    background-image: url(../img/coffee.png);
+  }
+  .apple {
+    background-image: url(../img/apple.png);
   }
 }
 
