@@ -101,6 +101,11 @@ header {
   margin-top: 5rem;
   padding-top: 5rem; }
 
+#photos {
+  padding: 0; }
+  #photos img {
+    max-width: 16.6666%; }
+
 .perks {
   background: url(../img/palm_tree.png) top center no-repeat;
   background-size: cover; }

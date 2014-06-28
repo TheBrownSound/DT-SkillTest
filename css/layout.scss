@@ -142,6 +142,13 @@ header {
   }
 }
 
+#photos {
+  padding: 0;
+  img {
+    max-width: 16.6666%;
+  }
+}
+
 .perks {
   background: url(../img/palm_tree.png) top center no-repeat;
   background-size: cover;
