@@ -8,10 +8,11 @@ body {
   color: $font-color;
   font-size: 20px;
   font-weight: 200;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h1, h2, dt {
@@ -198,5 +199,8 @@ header {
     border: 1px solid #1f1f1f;
     display: inline-block;
     padding: 1rem 2.5rem;
+    a {
+      font-weight: 700;
+    }
   }
 }
