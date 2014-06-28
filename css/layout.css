@@ -95,6 +95,10 @@ header {
 
 .details h2 em {
   font-weight: 100; }
+.details .info {
+  border-top: 1px solid #ebebeb;
+  margin-top: 5rem;
+  padding-top: 5rem; }
 
 .perks {
   background: url(../img/palm_tree.png) top center no-repeat;
