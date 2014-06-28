@@ -143,9 +143,21 @@ header {
 }
 
 #photos {
+  position: relative;
   padding: 0;
   img {
     max-width: 16.6666%;
+  }
+  .instagram-link {
+    background: $link-color url(../img/instagram_link.png) center center no-repeat;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    span {
+      display: none;
+    }
   }
 }
 

@@ -102,9 +102,19 @@ header {
   padding-top: 5rem; }
 
 #photos {
+  position: relative;
   padding: 0; }
   #photos img {
     max-width: 16.6666%; }
+  #photos .instagram-link {
+    background: #1baece url(../img/instagram_link.png) center center no-repeat;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    #photos .instagram-link span {
+      display: none; }
 
 .perks {
   background: url(../img/palm_tree.png) top center no-repeat;
