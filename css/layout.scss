@@ -195,6 +195,11 @@ header {
 }
 
 .apply{
+  h2:after {
+    content: url(../img/checkmark.png);
+    display: block;
+    padding-top: 1.5rem;
+  }
   .job-link {
     border: 1px solid #1f1f1f;
     display: inline-block;
