@@ -199,6 +199,23 @@
   <script src="js/foundation.min.js"></script>
   <script>
     $(document).foundation();
+
+    $(document).ready(function(){
+      $.ajax({
+        dataType: 'jsonp',
+        url: "https://api.instagram.com/v1/users/3/media/recent/?client_id=6f867f509df8488e9b115705bc003c68&count=12",
+        success: instagramSuccess,
+        error: instagramError
+      });
+
+      function instagramSuccess(result) {
+        console.log('Instagram Success', result);
+      }
+
+      function instagramError(error) {
+        console.log('Instagram Error', error);
+      }
+    })
   </script>
 </body>
 </html>
