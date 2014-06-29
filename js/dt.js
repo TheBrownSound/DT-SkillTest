@@ -44,23 +44,26 @@ var dt = function(){
   var app = {};
 
   // Quote section logic
-  var activeQuote = 0;
+  var activeQuote = false;
   var quotesWrapper = $('#quotes');
   var quotes = quotesWrapper.children();
+  var bullets = $('<ul class="bullets"></ul>');
   if (quotes.length > 1) {
-    var bullets = $('<ul class="bullets"></ul>');
     for (var i = 0; i < quotes.length; i++) {
-      var num = i+1;
-      var bullet = $('<li class="bullet" value="'+i+'">'+num+'</li>');
+      var bullet = $('<li class="bullet" value="'+i+'"></li>');
       bullets.append(bullet);
     }
-    bullets.children().on('click', bulletClicked);
+    bullets.children().on('click', function(evt){
+      setActiveQuote(evt.target.value);
+    });
     quotesWrapper.after(bullets);
+    setActiveQuote(0);
   }
 
-  function bulletClicked(evt) {
-    var index = evt.target.value;
+  function setActiveQuote(index) {
     if (index !== activeQuote) {
+      $(bullets.children()[activeQuote]).removeClass('active');
+      $(bullets.children()[index]).addClass('active');
       $(quotes[activeQuote]).removeClass('active');
       $(quotes[index]).addClass('active');
       activeQuote = index;

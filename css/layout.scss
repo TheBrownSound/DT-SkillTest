@@ -136,6 +136,25 @@ section {
   .quote.active {
     display: block;
   }
+  .bullets {
+    li {
+      background-color: #fff;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 4px;
+      cursor: pointer;
+      width: 9px;
+      height: 9px;
+      vertical-align: middle;
+    }
+    li.active {
+      background-color: transparent;
+      border: 2px solid #fff;
+      width: 11px;
+      height: 11px;
+      margin: 2px;
+    }
+  }
 }
 
 .details {
