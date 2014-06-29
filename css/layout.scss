@@ -79,11 +79,17 @@ section {
 
 header {
   padding-top: 2.3rem;
+  min-height: 600px;
   nav {
     text-align: left;
     .menu {
       float: right;
     }
+  }
+  .job-description {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
   }
   h1.ux-designer:before {
     content: url(../img/brush_cup.png);
@@ -93,6 +99,10 @@ header {
     width: 200px;
     border-bottom: 2px solid $font-color;
   }
+}
+
+section {
+  background-color: $bg-color;
 }
 
 .love {
@@ -164,6 +174,7 @@ header {
 .perks {
   background: url(../img/palm_tree.png) top center no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   .perk {
     background-repeat: no-repeat;
     background-position: top center;

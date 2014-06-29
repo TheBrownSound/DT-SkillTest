@@ -58,11 +58,16 @@ section {
   width: 100%; }
 
 header {
-  padding-top: 2.3rem; }
+  padding-top: 2.3rem;
+  min-height: 600px; }
   header nav {
     text-align: left; }
     header nav .menu {
       float: right; }
+  header .job-description {
+    position: fixed;
+    z-index: -1;
+    width: 100%; }
   header h1.ux-designer:before {
     content: url(../img/brush_cup.png);
     display: block;
@@ -70,6 +75,9 @@ header {
     padding: 0.9rem;
     width: 200px;
     border-bottom: 2px solid #333333; }
+
+section {
+  background-color: white; }
 
 .love {
   background-color: #f7f7f7; }
@@ -118,7 +126,8 @@ header {
 
 .perks {
   background: url(../img/palm_tree.png) top center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
   .perks .perk {
     background-repeat: no-repeat;
     background-position: top center;
