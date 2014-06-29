@@ -43,6 +43,19 @@ var DesignerQuiz = function() {
 var dt = function(){
   var app = {};
 
+  // Quote section logic
+
+  var quotes = $('#quotes');
+  var numOfQuotes = quotes.children().length;
+  if (numOfQuotes > 1) {
+    var bullets = $('<ul class="bullets"></ul>');
+    for (var i = 0; i < numOfQuotes; i++) {
+      var num = i+1;
+      bullets.append('<li class="bullet">'+num+'</li>');
+    }
+    quotes.after(bullets);
+  }
+
   app.instagram = new InstagramPhotos(12);
   app.quiz = new DesignerQuiz();
 
