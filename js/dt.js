@@ -44,16 +44,27 @@ var dt = function(){
   var app = {};
 
   // Quote section logic
-
-  var quotes = $('#quotes');
-  var numOfQuotes = quotes.children().length;
-  if (numOfQuotes > 1) {
+  var activeQuote = 0;
+  var quotesWrapper = $('#quotes');
+  var quotes = quotesWrapper.children();
+  if (quotes.length > 1) {
     var bullets = $('<ul class="bullets"></ul>');
-    for (var i = 0; i < numOfQuotes; i++) {
+    for (var i = 0; i < quotes.length; i++) {
       var num = i+1;
-      bullets.append('<li class="bullet">'+num+'</li>');
+      var bullet = $('<li class="bullet" value="'+i+'">'+num+'</li>');
+      bullets.append(bullet);
     }
-    quotes.after(bullets);
+    bullets.children().on('click', bulletClicked);
+    quotesWrapper.after(bullets);
+  }
+
+  function bulletClicked(evt) {
+    var index = evt.target.value;
+    if (index !== activeQuote) {
+      $(quotes[activeQuote]).removeClass('active');
+      $(quotes[index]).addClass('active');
+      activeQuote = index;
+    }
   }
 
   app.instagram = new InstagramPhotos(12);
