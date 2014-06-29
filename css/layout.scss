@@ -2,6 +2,7 @@ $bg-color: #ffffff;
 $font-color: #333333;
 $link-color: #1baece;
 $link-hover-color: #1baece;
+$constrain-value: 52rem;
 
 body {
   background-color: $bg-color;
@@ -60,7 +61,7 @@ blockquote:after {
 }
 
 .constrain {
-  max-width: 52rem;
+  max-width: $constrain-value;
   margin-left: auto;
   margin-right: auto;
 }
@@ -112,29 +113,39 @@ section {
 .team {
   background: url(../img/office_meeting.png) center center no-repeat;
   background-size: cover;
-  .quote {
-    display: none;
-    blockquote {
-      font-size: 2.4rem;
-      font-weight: 100;
-      margin-bottom: 3rem;
-      margin-top: 6rem;
-    }
-    .author {
-      * {
-        margin: 0 auto 1rem;
-        display: block;
-      }
-      .name {
-        text-transform: uppercase;
-      }
-      .title {
+  #quotes {
+    position: relative;
+    height: 420px;
+    .quote {
+      float: left;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      -webkit-transition: opacity 500ms;
+      blockquote {
+        font-size: 2.4rem;
         font-weight: 100;
+        margin: 6rem auto 3rem;
+        max-width: $constrain-value;
+      }
+      .author {
+        * {
+          margin: 0 auto 1rem;
+          display: block;
+        }
+        .name {
+          text-transform: uppercase;
+        }
+        .title {
+          font-weight: 100;
+        }
       }
     }
-  }
-  .quote.active {
-    display: block;
+    .quote.active {
+      opacity: 1;
+      -webkit-transition-delay: 500ms;
+    }
   }
   .bullets {
     li {

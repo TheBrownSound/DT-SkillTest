@@ -85,22 +85,31 @@ section {
 .team {
   background: url(../img/office_meeting.png) center center no-repeat;
   background-size: cover; }
-  .team .quote {
-    display: none; }
-    .team .quote blockquote {
-      font-size: 2.4rem;
-      font-weight: 100;
-      margin-bottom: 3rem;
-      margin-top: 6rem; }
-    .team .quote .author * {
-      margin: 0 auto 1rem;
-      display: block; }
-    .team .quote .author .name {
-      text-transform: uppercase; }
-    .team .quote .author .title {
-      font-weight: 100; }
-  .team .quote.active {
-    display: block; }
+  .team #quotes {
+    position: relative;
+    height: 420px; }
+    .team #quotes .quote {
+      float: left;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      -webkit-transition: opacity 500ms; }
+      .team #quotes .quote blockquote {
+        font-size: 2.4rem;
+        font-weight: 100;
+        margin: 6rem auto 3rem;
+        max-width: 52rem; }
+      .team #quotes .quote .author * {
+        margin: 0 auto 1rem;
+        display: block; }
+      .team #quotes .quote .author .name {
+        text-transform: uppercase; }
+      .team #quotes .quote .author .title {
+        font-weight: 100; }
+    .team #quotes .quote.active {
+      opacity: 1;
+      -webkit-transition-delay: 500ms; }
   .team .bullets li {
     background-color: #fff;
     display: inline-block;
