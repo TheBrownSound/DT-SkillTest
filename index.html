@@ -195,32 +195,9 @@
   </section>
   
   <!-- Javascripts -->
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/foundation.min.js"></script>
-  <script>
-    $(document).foundation();
-
-    $(document).ready(function(){
-      $.ajax({
-        dataType: 'jsonp',
-        url: "https://api.instagram.com/v1/users/439020677/media/recent/?client_id=6f867f509df8488e9b115705bc003c68&count=12",
-        success: instagramSuccess,
-        error: instagramError
-      });
-
-      function instagramSuccess(result) {
-        console.log('Instagram Success', result);
-        var photos = $('#photos');
-        for (var photo in result.data) {
-          var pic = result.data[photo];
-          photos.append('<img src="'+pic.images.low_resolution.url+'" />');
-        }
-      }
-
-      function instagramError(error) {
-        console.log('Instagram Error', error);
-      }
-    })
-  </script>
+  <script ></script>
+  <script type="text/javascript" src="js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="js/foundation.min.js"></script>
+  <script type="text/javascript" src="js/dt.js"></script>
 </body>
 </html>
