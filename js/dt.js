@@ -1,17 +1,10 @@
 // script assumes jquery is available
-var dt = {};//namespace
 
-dt.quiz = function() {
-  var test = {};
-
-  return test;
-}();
-
-dt.instagram = function(){
+var InstagramPhotos = function(count){
   var inst = {};
   var clientId = "6f867f509df8488e9b115705bc003c68";
   var dtId = "439020677";
-  var endpoint = "https://api.instagram.com/v1/users/"+dtId+"/media/recent/?client_id"+clientId+"=&count=12";
+  var endpoint = "https://api.instagram.com/v1/users/"+dtId+"/media/recent/?client_id="+clientId+"&count="+count;
 
   function instagramSuccess(result) {
     console.log('Instagram Success', result);
@@ -24,9 +17,11 @@ dt.instagram = function(){
 
   function instagramError(error) {
     console.log('Instagram Error', error);
+
   }
 
-  inst.getPhotos = function(elementToPopulate){
+  inst.getPhotos = function(){
+    console.log('rawr');
     $.ajax({
       dataType: 'jsonp',
       url: endpoint,
@@ -36,6 +31,22 @@ dt.instagram = function(){
   };
 
   return inst;
+};
+
+var DesignerQuiz = function() {
+  var test = {};
+
+  return test;
+};
+
+
+var dt = function(){
+  var app = {};
+
+  app.instagram = new InstagramPhotos(12);
+  app.quiz = new DesignerQuiz();
+
+  return app;
 }();
 
 // Initialize foundation
@@ -44,8 +55,5 @@ $(document).foundation();
 // Initialize custom components
 $(document).ready(function(){
   // Instagram feed
-  var photoElement = $("#photos");
-  if (photoElement) {
-    dt.instagram(photoElement);
-  }
+  dt.instagram.getPhotos();
 });
