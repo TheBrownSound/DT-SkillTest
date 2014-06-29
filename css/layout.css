@@ -15,7 +15,7 @@ h1 {
   font-size: 3.5rem; }
 
 h2 {
-  font-size: 2rem; }
+  font-size: 2.4rem; }
 
 p {
   margin-bottom: 1.5rem; }
@@ -185,6 +185,12 @@ section {
     background-image: url(../img/coffee.png); }
   .perks .apple {
     background-image: url(../img/laptop.png); }
+
+.quiz h2:before {
+  content: url(../img/pencil.png);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1.25rem; }
 
 .apply h2:after {
   content: url(../img/checkmark.png);
