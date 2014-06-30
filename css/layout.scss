@@ -6,6 +6,7 @@ $off-white: #efefef;
 $bg-blue: #37aecc;
 $constrain-value: 52rem;
 $inverted-bg: #282828;
+$bold: 700;
 
 body {
   background-color: $bg-color;
@@ -16,7 +17,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, strong {
-  font-weight: 700;
+  font-weight: $bold;
 }
 
 h1, h2, dt {
@@ -285,9 +286,7 @@ section {
     li {
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
-      -webkit-transition: all 500ms;
-      transition: all 500ms;
-
+      opacity: 1;
       top: 100%;
       position: absolute;
       background-color: #4A4A4A;
@@ -301,14 +300,33 @@ section {
     }
     li.show {
       top: 0;
+      opacity: 1;
+      -webkit-transition: -webkit-transform 500ms, top 500ms;
+      transition: transform 500ms, top 500ms;
       -webkit-transition-delay: 400ms;
       transition-delay: 400ms;
+      
     }
     li.hide {
-      opacity: 0.8;
       top: 0;
+      opacity: 0.8;
+      -webkit-transition: -webkit-transform 500ms, top 500ms, opacity 500ms;
+      transition: transform 500ms, top 500ms, opacity 500ms;
       -webkit-transform: translate3d(0, 0, -300px);
       transform: translate3d(0, 0, -300px);
+    }
+    // Results Style
+    li.results {
+      background-color: $font-color;
+      .result {
+        color: #666666;
+        font-size: 4.3rem;
+        strong {
+          color: #fff;
+          font-size: 8rem;
+          font-weight: 200;
+        }
+      }
     }
     // Custom Question styles
     li.resolution, li.blending, li.animal {
@@ -367,7 +385,7 @@ section {
         line-height: 38px;
         display: inline-block;
         font-size: 1rem;
-        font-weight: 700;
+        font-weight: $bold;
         text-transform: uppercase;
       }
       li:hover {
@@ -377,6 +395,8 @@ section {
     }
     .result {
       line-height: 110px;
+      text-transform: uppercase;
+      font-weight: $bold;
     }
     .correct {
       background-color: #4ed195;
@@ -398,7 +418,7 @@ section {
     display: inline-block;
     padding: 1rem 2.5rem;
     a {
-      font-weight: 700;
+      font-weight: $bold;
     }
   }
 }

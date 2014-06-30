@@ -48,6 +48,7 @@ var DesignerQuiz = function() {
   var _total = 0;
   var _questionList;
   var _optionWrapper;
+  var _results;
 
   function showQuestion(index) {
     console.log('showQuestion', index);
@@ -58,7 +59,7 @@ var DesignerQuiz = function() {
     var slide = $('<li class="results"></li>');
     var title = $('<h3></h3>');
     var message = $('<p></p>');
-    var count = $('<span class="result"><em>'+_total+'</em>/'+_questions.length+'</span>');
+    var count = $('<span class="result"><strong>'+_total+'</strong>/'+_questions.length+'</span>');
     
     if (_total >= 8) {
       title.text('Nice work!');
@@ -73,17 +74,34 @@ var DesignerQuiz = function() {
 
     slide.append([title, message, count]);
     $(questionList).append(slide);
+    _results = slide;
 
     setTimeout(function(){
       slide.addClass('show'); // Silly hack to make sure the slide animates, fix later.
     }, 1);
   }
 
-  function populateOptions(options) {
+  function resetQuiz() {
+    _total = _currentQuestion = 0;
+    $(questionList.children()).removeClass('hide');
+    console.log('result',questionList.find('results')[0]);
+    $(_results).addClass('hide');
+    showQuestion(_currentQuestion);
+    populateOptions(_questions[_currentQuestion].options);
+    setTimeout(function(){
+      $(_results).remove();
+      _results = null;
+    }, 1400);
+  }
+
+  function populateOptions(options, reset) {
     console.log('populateOptions', options);
     _optionWrapper.empty();
     for (var option in options) {
       var item = $('<li>'+options[option]+'</li>');
+      if (reset) {
+        item.attr('value', 'reset');
+      }
       _optionWrapper.append(item);
     }
   }
@@ -105,19 +123,27 @@ var DesignerQuiz = function() {
     answerBar.addClass('show');
     $(questionList.children()[_currentQuestion]).removeClass('show');
     $(questionList.children()[_currentQuestion]).addClass('hide');
+    if (_currentQuestion-1 >= 0) {
+      $(questionList.children()[_currentQuestion-1]).removeClass('hide');
+    }
 
     _currentQuestion++;
+    var options;
     if (_currentQuestion < _questions.length) {
       showQuestion(_currentQuestion);
+      options = _questions[_currentQuestion].options
     } else {
       showResults();
-      _optionWrapper.empty();
     }
 
     setTimeout(function(){
       answerBar.removeClass('show');
       $('.bar .options').addClass('show');
-      populateOptions(_questions[_currentQuestion].options);
+      if (options) {
+        populateOptions(options);
+      } else {
+        populateOptions(["Re-take the Quiz"], true);
+      }
     }, 1400);
   }
 
@@ -143,7 +169,12 @@ var DesignerQuiz = function() {
       }
 
       $('.options').delegate('li','click', function(evt){
-        submitAnswer($(evt.target).text());
+        console.log('evt', evt);
+        if ($(evt.target).attr('value') == "reset") {
+          resetQuiz();
+        } else {
+          submitAnswer($(evt.target).text());
+        }
       });
 
       showQuestion(0);
