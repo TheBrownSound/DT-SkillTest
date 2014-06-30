@@ -64,10 +64,11 @@ var DesignerQuiz = function() {
     var btns = $('<div class="buttons"></div>');
     var facebookBtn = $('<a class="button facebook" href="">Share on Facebook</a>');
     var twitterBtn = $('<a class="button twitter" href="https://twitter.com/intent/tweet">Share on Twitter</a>');
-    if (_total >= 8) {
+    var perc = _total/_questions.length;
+    if (perc >= 8) {
       title.text('Nice work!');
       message.text('You are a design ninja, we hope you will apply!');
-    } else if (_total >= 4) {
+    } else if (perc >= 4) {
       title.text('Not bad!');
       message.text('Your skills are shaping up nicely. You have a promising future in design. Apply now!');
     } else {
