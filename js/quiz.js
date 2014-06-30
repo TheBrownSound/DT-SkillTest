@@ -31,6 +31,31 @@ var DesignerQuiz = function() {
     populateOptions(_questions[_currentQuestion].options);
   }
 
+  function showResults() {
+    var slide = $('<li class="results"></li>');
+    var title = $('<h3></h3>');
+    var message = $('<p></p>');
+    var count = $('<span class="result"><em>'+_total+'</em>/'+_questions.length+'</span>');
+    
+    if (_total >= 8) {
+      title.text('Nice work!');
+      message.text('You are a design ninja, we hope you will apply!');
+    } else if (_total >= 4) {
+      title.text('Not bad!');
+      message.text('Your skills are shaping up nicely. You have a promising future in design. Apply now!');
+    } else {
+      title.text('Ouch.');
+      message.text('Did you forget your coffee this morning?');
+    }
+
+    slide.append([title, message, count]);
+    $(questionList).append(slide);
+
+    setTimeout(function(){
+      slide.addClass('show'); // Silly hack to make sure the slide animates, fix later.
+    }, 1);
+  }
+
   function populateOptions(options) {
     console.log('populateOptions', options);
     _optionWrapper.empty();
@@ -48,13 +73,19 @@ var DesignerQuiz = function() {
     console.log(currentAnswer);
     if (currentOptions.indexOf(answer) === currentAnswer) {
       console.log('Correct!');
+      _total++
     } else {
       console.log('Incorrect');
     }
     $(questionList.children()[_currentQuestion]).removeClass('show');
     $(questionList.children()[_currentQuestion]).addClass('hide');
+
     _currentQuestion++;
-    showQuestion(_currentQuestion);
+    if (_currentQuestion < _questions.length) {
+      showQuestion(_currentQuestion);
+    } else {
+      showResults();
+    }
   }
 
   test.create = function (testWrapper) {

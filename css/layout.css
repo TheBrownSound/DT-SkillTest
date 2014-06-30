@@ -193,7 +193,7 @@ section {
     display: inline-block;
     vertical-align: middle;
     margin-right: 1.25rem; }
-  .quiz .questions, .quiz .question {
+  .quiz .questions, .quiz .questions li {
     width: 100%;
     height: 25rem;
     overflow: hidden;
@@ -203,7 +203,7 @@ section {
     perspective: 1500px;
     position: relative;
     background-color: #000000; }
-    .quiz .questions .question {
+    .quiz .questions li {
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
       -webkit-transition: all 500ms;
@@ -211,45 +211,46 @@ section {
       top: 100%;
       position: absolute;
       background-color: #4A4A4A; }
-    .quiz .questions .question.show {
+    .quiz .questions li.show {
       top: 0;
-      -webkit-transition-delay: 400 ms;
+      -webkit-transition-delay: 400ms;
       transition-delay: 400ms; }
-    .quiz .questions .question.hide {
+    .quiz .questions li.hide {
+      opacity: 0.8;
       top: 0;
       -webkit-transform: translate3d(0, 0, -300px);
       transform: translate3d(0, 0, -300px); }
   .quiz .bar, .quiz .bar > * {
     width: 100%;
     height: 110px; }
-  .quiz .bar {
-    position: relative; }
   .quiz .bar > * {
     position: absolute;
     bottom: 0; }
-  .quiz .options {
-    background-color: #0a0a0a; }
-    .quiz .options li {
-      margin: 36px 10px;
-      width: 10rem;
-      height: 38px;
-      border-radius: 19px;
-      line-height: 38px;
-      display: inline-block;
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase; }
-    .quiz .options li:hover {
-      background-color: #ffffff;
-      color: #0a0a0a; }
-  .quiz .result {
-    line-height: 110px;
-    display: none;
-    backface-visibility: hidden; }
-  .quiz .correct {
-    background-color: #4ed195; }
-  .quiz .incorrect {
-    background-color: #f95c59; }
+  .quiz .bar {
+    position: relative; }
+    .quiz .bar .options {
+      background-color: #0a0a0a; }
+      .quiz .bar .options li {
+        margin: 36px 10px;
+        width: 10rem;
+        height: 38px;
+        border-radius: 19px;
+        line-height: 38px;
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase; }
+      .quiz .bar .options li:hover {
+        background-color: #ffffff;
+        color: #0a0a0a; }
+    .quiz .bar .result {
+      line-height: 110px;
+      display: none;
+      backface-visibility: hidden; }
+    .quiz .bar .correct {
+      background-color: #4ed195; }
+    .quiz .bar .incorrect {
+      background-color: #f95c59; }
 
 .apply h2:after {
   content: url(../img/checkmark.png);
