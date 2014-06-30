@@ -64,6 +64,18 @@ blockquote:after {
   content: "\201D";
 }
 
+.button {
+  background-color: $link-color;
+  color: $bg-color;
+  height: 38px;
+  line-height: 38px;
+  display: inline-block;
+  border-radius: 19px;
+  font-weight: $bold;
+  padding: 0px 2rem;
+  text-transform: uppercase;
+}
+
 .inverted {
   background-color: $inverted-bg;
   color: $bg-color;
@@ -411,6 +423,16 @@ section {
           font-weight: 200;
         }
       }
+      .button {
+        font-size: 1rem;
+        margin: 2rem;
+        &.twitter {
+          background-color: #60b5f0;
+        }
+        &.facebook {
+          background-color: #4665a3;
+        }
+      }
     }
     // Custom Question styles
     li.resolution, li.blending, li.animal {
@@ -541,6 +563,7 @@ section {
     color: $bg-color;
     background-color: $link-color;
     height: 30px;
+    padding: 0;
     line-height: 30px;
     border-radius: 15px;
     display: block;

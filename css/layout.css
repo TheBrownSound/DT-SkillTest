@@ -42,6 +42,17 @@ blockquote:before {
 blockquote:after {
   content: "\201D"; }
 
+.button {
+  background-color: #1baece;
+  color: white;
+  height: 38px;
+  line-height: 38px;
+  display: inline-block;
+  border-radius: 19px;
+  font-weight: 700;
+  padding: 0px 2rem;
+  text-transform: uppercase; }
+
 .inverted {
   background-color: #282828;
   color: white; }
@@ -305,6 +316,13 @@ section {
           color: #fff;
           font-size: 8rem;
           font-weight: 200; }
+      .quiz .questions li.results .button {
+        font-size: 1rem;
+        margin: 2rem; }
+        .quiz .questions li.results .button.twitter {
+          background-color: #60b5f0; }
+        .quiz .questions li.results .button.facebook {
+          background-color: #4665a3; }
     .quiz .questions li.resolution, .quiz .questions li.blending, .quiz .questions li.animal {
       background-color: #efefef;
       color: #333333; }
@@ -407,6 +425,7 @@ section {
     color: white;
     background-color: #1baece;
     height: 30px;
+    padding: 0;
     line-height: 30px;
     border-radius: 15px;
     display: block;
