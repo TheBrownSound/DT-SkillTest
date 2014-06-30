@@ -491,6 +491,7 @@ section {
 }
 
 #apply {
+  min-height: 100%;
   h2:after {
     content: url(../img/checkmark.png);
     display: block;

@@ -363,16 +363,18 @@ section {
     .quiz .bar .incorrect {
       background-color: #f95c59; }
 
-#apply h2:after {
-  content: url(../img/checkmark.png);
-  display: block;
-  padding-top: 1.5rem; }
-#apply .job-link {
-  border: 1px solid #1f1f1f;
-  display: inline-block;
-  padding: 1rem 2.5rem; }
-  #apply .job-link a {
-    font-weight: 700; }
+#apply {
+  min-height: 100%; }
+  #apply h2:after {
+    content: url(../img/checkmark.png);
+    display: block;
+    padding-top: 1.5rem; }
+  #apply .job-link {
+    border: 1px solid #1f1f1f;
+    display: inline-block;
+    padding: 1rem 2.5rem; }
+    #apply .job-link a {
+      font-weight: 700; }
 
 #jumplink {
   background-color: #333333;
