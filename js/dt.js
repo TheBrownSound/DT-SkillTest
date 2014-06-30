@@ -1,4 +1,5 @@
 // script assumes jquery is available
+// @depends quiz.js
 
 var InstagramPhotos = function(count){
   var inst = {};
