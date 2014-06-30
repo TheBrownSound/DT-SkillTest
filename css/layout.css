@@ -89,12 +89,12 @@ section {
   .love #marquee {
     width: 99999px; }
     .love #marquee .group {
-      margin: 3rem;
+      padding: 4rem;
       float: left; }
     .love #marquee .group.medium {
-      width: 300px; }
+      width: 400px; }
     .love #marquee .group.large {
-      width: 500px; }
+      width: 600px; }
     .love #marquee .item {
       position: relative; }
       .love #marquee .item .portrait {
@@ -109,9 +109,10 @@ section {
       margin-bottom: 1rem; }
     .love #marquee .screenshot {
       border: 1px solid #e8e8e8; }
+    .love #marquee .pad {
+      margin-bottom: 4rem; }
     .love #marquee .description {
       font-style: italic;
-      margin-bottom: 4rem;
       display: inline-block; }
       .love #marquee .description strong {
         font-style: normal;

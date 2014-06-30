@@ -33,6 +33,49 @@ var InstagramPhotos = function(count){
   return inst;
 };
 
+var Marquee = function(){
+  var marquee = {};
+  var _wrapper;
+  var _items = [];
+  var _pixelsPerSecond = 4;
+
+  function scrollGroup() {
+    var firstGroup = _wrapper.children(':first');
+    var scrollWidth = firstGroup.outerWidth()-parseInt(firstGroup.css('margin-left'), 10);
+    var duration = (scrollWidth/_pixelsPerSecond) * 100;
+    firstGroup.animate({'margin-left': -1 * scrollWidth},
+      duration, //duration
+      'linear', // ease
+      function() {
+        firstGroup.appendTo(_wrapper);
+        firstGroup.css('margin-left', 0);
+        scrollGroup();
+      }
+    );
+  }
+
+  marquee.pause = function(){
+
+  };
+
+  marquee.resume = function(){
+
+  };
+
+  marquee.init = function(wrapperId) {
+    _wrapper = $(wrapperId);
+    if (_wrapper) {
+      var groups = _wrapper.children('.group');
+      for (var i = 0; i < groups.length; i++) {
+        _items.push(groups[i]);
+      }
+      scrollGroup();
+    }
+  };
+
+  return marquee;
+};
+
 var dt = function(){
   var app = {};
 
@@ -63,6 +106,7 @@ var dt = function(){
     }
   }
 
+  app.marquee = new Marquee();
   app.instagram = new InstagramPhotos(12);
   app.quiz = new DesignerQuiz();
 
@@ -74,9 +118,13 @@ $(document).foundation();
 
 // Initialize custom components
 $(document).ready(function(){
+  // Marquee
+  dt.marquee.init('#marquee');
+
   // Instagram feed
   dt.instagram.getPhotos();
 
   // Quiz
   dt.quiz.create('#test');
+
 });

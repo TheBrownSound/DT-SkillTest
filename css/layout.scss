@@ -121,14 +121,14 @@ section {
   #marquee {
     width: 99999px;
     .group {
-      margin: 3rem;
+      padding: 4rem;
       float: left;
     }
     .group.medium {
-      width: 300px;
+      width: 400px;
     }
     .group.large {
-      width: 500px;
+      width: 600px;
     }
     .item {
       position: relative;
@@ -149,9 +149,11 @@ section {
     .screenshot {
       border: 1px solid #e8e8e8;
     }
+    .pad {
+      margin-bottom: 4rem;
+    }
     .description {
       font-style: italic;
-      margin-bottom: 4rem;
       display: inline-block;
       strong {
         font-style: normal;
