@@ -116,12 +116,10 @@ var dt = function(){
     });
 
     $(window).scroll(function(){
-      if (!_jumpLinkClicked) {
+      if (!_jumpLinkClicked && !jumplink.hasClass('show')) {
         var scrollTop = $(window).scrollTop();
-        if (scrollTop >= 2600) {
+        if (scrollTop >= 2300) {
           jumplink.addClass('show');
-        } else {
-          jumplink.removeClass('show');
         }
       }
     });
