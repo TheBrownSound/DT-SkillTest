@@ -116,6 +116,55 @@ section {
 
 .love {
   background-color: #f7f7f7;
+  overflow: hidden;
+  width: 100%;
+  #marquee {
+    width: 99999px;
+    .group {
+      margin: 3rem;
+      float: left;
+    }
+    .group.medium {
+      width: 300px;
+    }
+    .group.large {
+      width: 500px;
+    }
+    .item {
+      position: relative;
+      .portrait {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: -50px;
+        top: 20%;
+        border: 1px solid #e8e8e8;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+    .screenshot {
+      border: 1px solid #e8e8e8;
+    }
+    .description {
+      font-style: italic;
+      margin-bottom: 4rem;
+      display: inline-block;
+      strong {
+        font-style: normal;
+        text-transform: uppercase;
+      }
+    }
+    
+  }
+  #marquee:after {
+    clear: both;
+    content:"";
+    display:block;
+  }
 }
 
 .team {

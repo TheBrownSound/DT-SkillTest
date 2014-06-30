@@ -83,7 +83,43 @@ section {
   background-color: white; }
 
 .love {
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  overflow: hidden;
+  width: 100%; }
+  .love #marquee {
+    width: 99999px; }
+    .love #marquee .group {
+      margin: 3rem;
+      float: left; }
+    .love #marquee .group.medium {
+      width: 300px; }
+    .love #marquee .group.large {
+      width: 500px; }
+    .love #marquee .item {
+      position: relative; }
+      .love #marquee .item .portrait {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: -50px;
+        top: 20%;
+        border: 1px solid #e8e8e8; }
+    .love #marquee img {
+      max-width: 100%;
+      margin-bottom: 1rem; }
+    .love #marquee .screenshot {
+      border: 1px solid #e8e8e8; }
+    .love #marquee .description {
+      font-style: italic;
+      margin-bottom: 4rem;
+      display: inline-block; }
+      .love #marquee .description strong {
+        font-style: normal;
+        text-transform: uppercase; }
+  .love #marquee:after {
+    clear: both;
+    content: "";
+    display: block; }
 
 .team {
   background: url(../img/office_meeting.png) center center no-repeat;
