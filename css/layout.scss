@@ -32,6 +32,10 @@ h2 {
   font-size: 2.4rem;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
 p {
   margin-bottom: 1.5rem;
 }
@@ -182,7 +186,21 @@ section {
   .info {
     border-top: 1px solid #ebebeb;
     margin-top: 5rem;
-    padding-top: 5rem;
+    .blog {
+      padding-top: 5rem;
+      h3 {
+        text-transform: uppercase;
+      }
+      h3, p {
+        margin-bottom: 1rem;
+      }
+    }
+    .praise {
+      padding-top: 3rem;
+      blockquote {
+        font-size: 1.9rem;
+      }
+    }
   }
 }
 

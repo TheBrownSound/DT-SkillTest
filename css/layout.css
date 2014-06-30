@@ -17,6 +17,9 @@ h1 {
 h2 {
   font-size: 2.4rem; }
 
+h3 {
+  font-size: 2rem; }
+
 p {
   margin-bottom: 1.5rem; }
 
@@ -130,8 +133,17 @@ section {
   font-weight: 100; }
 .details .info {
   border-top: 1px solid #ebebeb;
-  margin-top: 5rem;
-  padding-top: 5rem; }
+  margin-top: 5rem; }
+  .details .info .blog {
+    padding-top: 5rem; }
+    .details .info .blog h3 {
+      text-transform: uppercase; }
+    .details .info .blog h3, .details .info .blog p {
+      margin-bottom: 1rem; }
+  .details .info .praise {
+    padding-top: 3rem; }
+    .details .info .praise blockquote {
+      font-size: 1.9rem; }
 
 #photos {
   position: relative;
