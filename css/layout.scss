@@ -262,21 +262,22 @@ section {
      vertical-align: middle;
      margin-right: 1.25rem;
   }
-  .questions, .question {
+  #questions, .question {
     width: 100%;
     height: 25rem;
     overflow: hidden;
     display: block;
   }
-  .questions {
+  #questions {
     position: relative;
     background-color: #000000;
     .question {
+      top: 100%;
       position: absolute;
       background-color: #4A4A4A;
-      .answers {
-        display: none;
-      }
+    }
+    .question.show {
+      top: 0;
     }
   }
   .bar, .bar > * {

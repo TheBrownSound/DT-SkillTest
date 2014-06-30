@@ -33,13 +33,6 @@ var InstagramPhotos = function(count){
   return inst;
 };
 
-var DesignerQuiz = function() {
-  var test = {};
-
-  return test;
-};
-
-
 var dt = function(){
   var app = {};
 
@@ -83,4 +76,7 @@ $(document).foundation();
 $(document).ready(function(){
   // Instagram feed
   dt.instagram.getPhotos();
+
+  // Quiz
+  dt.quiz.create('#questions');
 });
