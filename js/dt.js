@@ -78,5 +78,5 @@ $(document).ready(function(){
   dt.instagram.getPhotos();
 
   // Quiz
-  dt.quiz.create('#questions');
+  dt.quiz.create('#test');
 });
