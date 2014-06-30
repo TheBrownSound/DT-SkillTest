@@ -60,7 +60,7 @@ var DesignerQuiz = function() {
     var title = $('<h3></h3>');
     var message = $('<p></p>');
     var count = $('<span class="result"><strong>'+_total+'</strong>/'+_questions.length+'</span>');
-    
+    var twitterBtn = $('<a href="https://twitter.com/intent/tweet">Share on Twitter</a>');
     if (_total >= 8) {
       title.text('Nice work!');
       message.text('You are a design ninja, we hope you will apply!');
@@ -72,7 +72,7 @@ var DesignerQuiz = function() {
       message.text('Did you forget your coffee this morning?');
     }
 
-    slide.append([title, message, count]);
+    slide.append([title, message, count, twitterBtn]);
     $(questionList).append(slide);
     _results = slide;
 
