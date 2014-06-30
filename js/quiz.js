@@ -22,15 +22,17 @@ var DesignerQuiz = function() {
       
   var _currentQuestion = 0;
   var _total = 0;
-  var wrapper;
+  var _questionList;
   var _optionWrapper;
 
-  function nextQuestion() {
-    _currentQuestion++;
-    populateOptions(_questions[_currentQuestion.options]);
+  function showQuestion(index) {
+    console.log('showQuestion', index);
+    $(questionList.children()[index]).addClass('show');
+    populateOptions(_questions[_currentQuestion].options);
   }
 
   function populateOptions(options) {
+    console.log('populateOptions', options);
     _optionWrapper.empty();
     for (var option in options) {
       var item = $('<li>'+options[option]+'</li>');
@@ -39,6 +41,7 @@ var DesignerQuiz = function() {
   }
 
   function submitAnswer(answer){
+    console.log('submitAnswer', answer);
     var currentOptions = _questions[_currentQuestion].options;
     var currentAnswer = _questions[_currentQuestion].answer;
     console.log(currentOptions.indexOf(answer));
@@ -48,11 +51,14 @@ var DesignerQuiz = function() {
     } else {
       console.log('Incorrect');
     }
-    nextQuestion();
+    $(questionList.children()[_currentQuestion]).removeClass('show');
+    $(questionList.children()[_currentQuestion]).addClass('hide');
+    _currentQuestion++;
+    showQuestion(_currentQuestion);
   }
 
   test.create = function (testWrapper) {
-    var questionList = $($(testWrapper+" .questions")[0]);
+    questionList = $($(testWrapper+" .questions")[0]);
     _optionWrapper = $($(testWrapper+" .options")[0]);
     if (questionList) {
       for (var i = 0; i < _questions.length; i++) {
@@ -62,7 +68,6 @@ var DesignerQuiz = function() {
         
         if (i === 0) {
           slide.addClass('show');
-          populateOptions(question.options);
         }
 
         var count = $('<span class="count">'+(i+1)+'/'+_questions.length+'</span>');
@@ -70,12 +75,14 @@ var DesignerQuiz = function() {
         var title = $('<h3>'+question.title+'</h3>');
         var img = $('<img src="'+question.imgPath+'" />');
         slide.append([count, title, img]);
-        questionList.append(slide);
+        $(questionList).append(slide);
       }
 
-      $('.options li').bind('click', function(evt){
+      $('.options').delegate('li','click', function(evt){
         submitAnswer($(evt.target).text());
       });
+
+      showQuestion(0);
     }
   };
 
