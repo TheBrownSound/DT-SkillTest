@@ -9,37 +9,37 @@ var DesignerQuiz = function() {
   },{
     title: "What is the screen resolution of the iPhone 5s?",
     customClass: "resolution",
-    imgPath: "img/test_font.png",
+    imgPath: "img/iphone.png",
     options: ["960 X 400","1024 x 768","1136 x 640","1280 x 768"],
     answer: 2
   },{
     title: "Which blending mode is this?",
     customClass: "blending",
-    imgPath: "img/test_font.png",
+    imgPath: "img/blending.png",
     options: ["Dissolve","Multiply","Color","Difference"],
     answer: 2
   },{
     title: "How many columns is the default bootstrap grid?",
     customClass: "bootstrap",
-    imgPath: "img/test_font.png",
+    imgPath: "img/grid.png",
     options: ["8","12","16","24"],
     answer: 2
   },{
     title: "Which of the following is not a type foundry?",
     customClass: "type",
-    imgPath: "img/test_font.png",
+    imgPath: "img/logos.png",
     options: ["Veer","VSCO","HF&J","House Industries"],
     answer: 3
   },{
     title: "Someone that can design and develop is often referred to as:",
     customClass: "animal",
-    imgPath: "img/test_font.png",
+    imgPath: "img/animals.png",
     options: ["Unicorn","Jackelope","Pegasus","Centaur"],
     answer: 0
   },{
     title: "Which of these is not a to-do app?",
     customClass: "todo",
-    imgPath: "img/test_font.png",
+    imgPath: "img/todo_icons.png",
     options: ["Clear","Wunderlist","Flipboard","Cheddar"],
     answer: 2
   }];
@@ -118,7 +118,7 @@ var DesignerQuiz = function() {
       answerBar.removeClass('show');
       $('.bar .options').addClass('show');
       populateOptions(_questions[_currentQuestion].options);
-    }, 1000);
+    }, 1400);
   }
 
   test.create = function (testWrapper) {

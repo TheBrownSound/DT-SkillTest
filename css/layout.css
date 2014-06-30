@@ -39,7 +39,7 @@ blockquote:after {
   content: "\201D"; }
 
 .inverted {
-  background-color: #333333;
+  background-color: #282828;
   color: white; }
 
 .constrain {
@@ -194,12 +194,14 @@ section {
     vertical-align: middle;
     margin-right: 1.25rem; }
   .quiz #test {
-    position: relative; }
+    position: relative;
+    margin-top: 5rem; }
   .quiz .questions, .quiz .questions li {
     width: 100%;
-    height: 25rem;
+    height: 35rem;
     overflow: hidden;
-    display: block; }
+    display: block;
+    padding-top: 3.5rem; }
   .quiz .questions {
     -webkit-perspective: 1500px;
     perspective: 1500px;
@@ -213,6 +215,11 @@ section {
       top: 100%;
       position: absolute;
       background-color: #4A4A4A; }
+      .quiz .questions li .count {
+        font-style: italic; }
+      .quiz .questions li h3 {
+        margin-top: 0.9rem;
+        font-size: 2.4rem; }
     .quiz .questions li.show {
       top: 0;
       -webkit-transition-delay: 400ms;
@@ -222,6 +229,18 @@ section {
       top: 0;
       -webkit-transform: translate3d(0, 0, -300px);
       transform: translate3d(0, 0, -300px); }
+    .quiz .questions li.resolution, .quiz .questions li.blending, .quiz .questions li.animal {
+      background-color: #efefef;
+      color: #333333; }
+    .quiz .questions li.bootstrap, .quiz .questions li.todo {
+      background-color: #37aecc; }
+    .quiz .questions li.type {
+      background-color: #fff;
+      color: #333333; }
+      .quiz .questions li.type img {
+        padding-top: 2.5rem; }
+    .quiz .questions li.todo img {
+      padding-top: 1.5rem; }
   .quiz .bar, .quiz .bar > * {
     width: 100%;
     height: 110px; }
@@ -235,8 +254,8 @@ section {
     transform-origin: 50% 0%;
     -webkit-transform: rotateX(-90deg);
     transform: rotateX(-90deg);
-    -webkit-transition: -webkit-transform 1s ease;
-    transition: transform 1s ease; }
+    -webkit-transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease; }
   .quiz .bar {
     position: absolute;
     bottom: 0; }
