@@ -28,7 +28,6 @@ var DesignerQuiz = function() {
   function showQuestion(index) {
     console.log('showQuestion', index);
     $(questionList.children()[index]).addClass('show');
-    populateOptions(_questions[_currentQuestion].options);
   }
 
   function showResults() {
@@ -71,12 +70,15 @@ var DesignerQuiz = function() {
     var currentAnswer = _questions[_currentQuestion].answer;
     console.log(currentOptions.indexOf(answer));
     console.log(currentAnswer);
+    var answerBar;
     if (currentOptions.indexOf(answer) === currentAnswer) {
-      console.log('Correct!');
-      _total++
+      answerBar = $('.bar .result.correct');
+      _total++;
     } else {
-      console.log('Incorrect');
+      answerBar = $('.bar .result.incorrect');
     }
+    $('.bar .options').removeClass('show');
+    answerBar.addClass('show');
     $(questionList.children()[_currentQuestion]).removeClass('show');
     $(questionList.children()[_currentQuestion]).addClass('hide');
 
@@ -85,7 +87,14 @@ var DesignerQuiz = function() {
       showQuestion(_currentQuestion);
     } else {
       showResults();
+      _optionWrapper.empty();
     }
+
+    setTimeout(function(){
+      answerBar.removeClass('show');
+      $('.bar .options').addClass('show');
+      populateOptions(_questions[_currentQuestion].options);
+    }, 1000);
   }
 
   test.create = function (testWrapper) {
@@ -114,6 +123,7 @@ var DesignerQuiz = function() {
       });
 
       showQuestion(0);
+      populateOptions(_questions[0].options);
     }
   };
 
