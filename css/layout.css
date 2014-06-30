@@ -62,7 +62,7 @@ section {
 
 header {
   padding-top: 2.3rem;
-  min-height: 600px; }
+  min-height: 30rem; }
   header nav {
     text-align: left; }
     header nav .menu {
@@ -363,13 +363,48 @@ section {
     .quiz .bar .incorrect {
       background-color: #f95c59; }
 
-.apply h2:after {
+#apply h2:after {
   content: url(../img/checkmark.png);
   display: block;
   padding-top: 1.5rem; }
-.apply .job-link {
+#apply .job-link {
   border: 1px solid #1f1f1f;
   display: inline-block;
   padding: 1rem 2.5rem; }
-  .apply .job-link a {
+  #apply .job-link a {
     font-weight: 700; }
+
+#jumplink {
+  background-color: #333333;
+  width: 6.6rem;
+  padding: 0 0.5rem 0.7rem;
+  position: fixed;
+  display: block;
+  text-align: center;
+  z-index: 20;
+  top: 40px;
+  right: -6.6rem;
+  -webkit-transition: right 1s;
+  transition: right 1s; }
+  #jumplink p:before {
+    content: url(../img/inbox.png);
+    display: block;
+    padding-bottom: 0.5rem;
+    margin: 0 auto 0.5rem;
+    width: 4.2rem;
+    border-bottom: 1px solid white; }
+  #jumplink p, #jumplink a {
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-bottom: 0; }
+  #jumplink .button {
+    color: white;
+    background-color: #1baece;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    display: block;
+    margin-top: 0.7rem; }
+  #jumplink.show {
+    right: 0; }

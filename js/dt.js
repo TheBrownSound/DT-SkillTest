@@ -78,6 +78,7 @@ var Marquee = function(){
 
 var dt = function(){
   var app = {};
+  var _jumpLinkClicked = false;
 
   // Quote section logic
   var activeQuote = false;
@@ -104,6 +105,26 @@ var dt = function(){
       $(quotes[index]).addClass('active');
       activeQuote = index;
     }
+  }
+
+  var jumplink = $("#jumplink");
+  if (jumplink) {
+    $("#jumplink a").on('click', function(){
+      _jumpLinkClicked = true;
+      jumplink.removeClass('show');
+      $('html, body').animate({scrollTop: $("#apply").position().top}, 500);
+    });
+
+    $(window).scroll(function(){
+      if (!_jumpLinkClicked) {
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop >= 2600) {
+          jumplink.addClass('show');
+        } else {
+          jumplink.removeClass('show');
+        }
+      }
+    });
   }
 
   app.marquee = new Marquee();
