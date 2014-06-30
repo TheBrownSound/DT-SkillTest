@@ -199,14 +199,26 @@ section {
     overflow: hidden;
     display: block; }
   .quiz .questions {
+    -webkit-perspective: 1500px;
+    perspective: 1500px;
     position: relative;
     background-color: #000000; }
     .quiz .questions .question {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transition: all 500ms;
+      transition: all 500ms;
       top: 100%;
       position: absolute;
       background-color: #4A4A4A; }
     .quiz .questions .question.show {
-      top: 0; }
+      top: 0;
+      -webkit-transition-delay: 400 ms;
+      transition-delay: 400ms; }
+    .quiz .questions .question.hide {
+      top: 0;
+      -webkit-transform: translate3d(0, 0, -300px);
+      transform: translate3d(0, 0, -300px); }
   .quiz .bar, .quiz .bar > * {
     width: 100%;
     height: 110px; }

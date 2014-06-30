@@ -269,15 +269,30 @@ section {
     display: block;
   }
   .questions {
+    -webkit-perspective: 1500px;
+    perspective: 1500px;
+
     position: relative;
     background-color: #000000;
     .question {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transition: all 500ms;
+      transition: all 500ms;
+
       top: 100%;
       position: absolute;
       background-color: #4A4A4A;
     }
     .question.show {
       top: 0;
+      -webkit-transition-delay: 400ms;
+      transition-delay: 400ms;
+    }
+    .question.hide {
+      top: 0;
+      -webkit-transform: translate3d(0, 0, -300px);
+      transform: translate3d(0, 0, -300px);
     }
   }
   .bar, .bar > * {
