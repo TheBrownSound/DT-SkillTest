@@ -305,11 +305,19 @@ var dt = function(){
     });
 
     $(window).scroll(function(){
+      var scrollTop = $(window).scrollTop();
       if (!_jumpLinkClicked && !jumplink.hasClass('show')) {
-        var scrollTop = $(window).scrollTop();
         if (scrollTop >= 2300) {
           jumplink.addClass('show');
         }
+      }
+
+      var perksBottom = $("#perks").position().top+$('#perks').innerHeight();
+      console.log("Perk bottom", perksBottom);
+      if (scrollTop + $(window).innerHeight() >= perksBottom) {
+        $("#perks").addClass('snap');
+      } else {
+        $("#perks").removeClass('snap');
       }
     });
   }

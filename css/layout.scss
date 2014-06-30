@@ -301,10 +301,13 @@ section {
   }
 }
 
-.perks {
-  background: url(../img/palm_tree.png) top center no-repeat;
+#perks {
+  background: url(../img/palm_tree.png) bottom center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  &.snap {
+    background-attachment: scroll;
+  }
   .perk {
     background-repeat: no-repeat;
     background-position: top center;

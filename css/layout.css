@@ -222,42 +222,44 @@ section {
     #photos .instagram-link span {
       display: none; }
 
-.perks {
-  background: url(../img/palm_tree.png) top center no-repeat;
+#perks {
+  background: url(../img/palm_tree.png) bottom center no-repeat;
   background-size: cover;
   background-attachment: fixed; }
-  .perks .perk {
+  #perks.snap {
+    background-attachment: scroll; }
+  #perks .perk {
     background-repeat: no-repeat;
     background-position: top center;
     margin-bottom: 2.5rem;
     margin-top: 2.5rem;
     padding-top: 5rem; }
-    .perks .perk dt {
+    #perks .perk dt {
       font-weight: 600;
       margin-bottom: 0.7rem; }
-  .perks .health {
+  #perks .health {
     background-image: url(../img/medic.png); }
-  .perks .retirement {
+  #perks .retirement {
     background-image: url(../img/pig.png); }
-  .perks .travel {
+  #perks .travel {
     background-image: url(../img/scooter.png); }
-  .perks .vacation {
+  #perks .vacation {
     background-image: url(../img/beach.png); }
-  .perks .lunch {
+  #perks .lunch {
     background-image: url(../img/cutlery.png); }
-  .perks .bonus {
+  #perks .bonus {
     background-image: url(../img/cash.png); }
-  .perks .dental-vision {
+  #perks .dental-vision {
     background-image: url(../img/glasses.png); }
-  .perks .growth {
+  #perks .growth {
     background-image: url(../img/column.png); }
-  .perks .snacks {
+  #perks .snacks {
     background-image: url(../img/fruit.png); }
-  .perks .beer {
+  #perks .beer {
     background-image: url(../img/beer.png); }
-  .perks .coffee {
+  #perks .coffee {
     background-image: url(../img/coffee.png); }
-  .perks .apple {
+  #perks .apple {
     background-image: url(../img/laptop.png); }
 
 .quiz {
