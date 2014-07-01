@@ -61,7 +61,7 @@ var DesignerQuiz = function() {
     var message = $('<p></p>');
     var count = $('<span class="result"><strong>'+_total+'</strong>/'+_questions.length+'</span>');
     var btns = $('<div class="buttons"></div>');
-    var facebookBtn = $('<a class="button facebook" href="">Share on Facebook</a>');
+    var facebookBtn = $('<a class="button facebook">Share on Facebook</a>');
     var twitterBtn = $('<a class="button twitter" href="https://twitter.com/intent/tweet">Share on Twitter</a>');
     var perc = _total/_questions.length;
     if (perc >= 8) {
@@ -82,6 +82,13 @@ var DesignerQuiz = function() {
     setTimeout(function(){
       slide.addClass('show'); // Silly hack to make sure the slide animates, fix later.
     }, 1);
+
+    facebookBtn.on('click', function(){
+      FB.ui({
+        method: 'share',
+        href: 'http://www.dtelepathy.com/careers/', // replace with production url
+      }, function(response){});
+    });
   }
 
   function resetQuiz() {
