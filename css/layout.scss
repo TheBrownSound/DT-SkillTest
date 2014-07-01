@@ -92,6 +92,10 @@ blockquote:after {
   max-width: $constrain-value;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: 40em) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .portrait {
@@ -127,6 +131,9 @@ header {
     padding: 0.9rem;
     width: 200px;
     border-bottom: 2px solid $font-color;
+  }
+  @media (max-width: 40em) {
+    min-height: 36rem;
   }
 }
 
@@ -194,7 +201,7 @@ section {
   background-size: cover;
   #quotes {
     position: relative;
-    height: 420px;
+    height: 28rem;
     .quote {
       float: left;
       opacity: 0;
@@ -207,6 +214,9 @@ section {
         font-weight: 100;
         margin: 6rem auto 3rem;
         max-width: $constrain-value;
+        @media (max-width: 40em) {
+          margin-top: 1rem;
+        }
       }
       .author {
         * {

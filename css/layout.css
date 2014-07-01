@@ -66,6 +66,10 @@ blockquote:after {
   max-width: 52rem;
   margin-left: auto;
   margin-right: auto; }
+  @media (max-width: 40em) {
+    .constrain {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
 
 .portrait {
   border-radius: 50%; }
@@ -95,6 +99,9 @@ header {
     padding: 0.9rem;
     width: 200px;
     border-bottom: 2px solid #333333; }
+  @media (max-width: 40em) {
+    header {
+      min-height: 36rem; } }
 
 section {
   background-color: white; }
@@ -144,7 +151,7 @@ section {
   background-size: cover; }
   .team #quotes {
     position: relative;
-    height: 420px; }
+    height: 28rem; }
     .team #quotes .quote {
       float: left;
       opacity: 0;
@@ -157,6 +164,9 @@ section {
         font-weight: 100;
         margin: 6rem auto 3rem;
         max-width: 52rem; }
+        @media (max-width: 40em) {
+          .team #quotes .quote blockquote {
+            margin-top: 1rem; } }
       .team #quotes .quote .author * {
         margin: 0 auto 1rem;
         display: block; }
