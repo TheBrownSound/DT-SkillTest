@@ -328,8 +328,12 @@ section {
         margin: 2rem; }
         .quiz .questions li.results .button.twitter {
           background-color: #60b5f0; }
+          .quiz .questions li.results .button.twitter:hover {
+            background-color: #80c7f8; }
         .quiz .questions li.results .button.facebook {
           background-color: #4665a3; }
+          .quiz .questions li.results .button.facebook:hover {
+            background-color: #5a7cc1; }
     .quiz .questions li.resolution, .quiz .questions li.blending, .quiz .questions li.animal {
       background-color: #efefef;
       color: #333333; }

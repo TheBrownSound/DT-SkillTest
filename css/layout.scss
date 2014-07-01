@@ -438,9 +438,15 @@ section {
         margin: 2rem;
         &.twitter {
           background-color: #60b5f0;
+          &:hover {
+            background-color: #80c7f8;
+          }
         }
         &.facebook {
           background-color: #4665a3;
+          &:hover {
+            background-color: #5a7cc1;
+          }
         }
       }
     }
