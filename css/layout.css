@@ -401,7 +401,8 @@ section {
         color: #0a0a0a; }
     .quiz .bar .result {
       text-transform: uppercase;
-      font-weight: 700; }
+      font-weight: 700;
+      line-height: 110px; }
       @media (max-width: 50em) {
         .quiz .bar .result {
           line-height: 220px; } }

@@ -534,6 +534,7 @@ section {
     .result {
       text-transform: uppercase;
       font-weight: $bold;
+      line-height: 110px;
       @media (max-width: 50em) {
         line-height: 220px;
       }
