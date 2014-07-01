@@ -1,7 +1,7 @@
 $bg-color: #ffffff;
 $font-color: #333333;
 $link-color: #1baece;
-$link-hover-color: #1baece;
+$link-hover-color: #5ac3dd;
 $off-white: #efefef;
 $bg-blue: #37aecc;
 $constrain-value: 52rem;
@@ -44,6 +44,9 @@ p {
 a {
   color: $link-color;
   text-decoration: none;
+  &:hover {
+    color: $link-hover-color;
+  }
 }
 
 ul, li, dl, dt, dd {
@@ -74,6 +77,10 @@ blockquote:after {
   font-weight: $bold;
   padding: 0px 2rem;
   text-transform: uppercase;
+  &:hover {
+    color: $bg-color;
+    background-color: $link-hover-color;
+  }
 }
 
 .inverted {
@@ -563,8 +570,6 @@ section {
     margin-bottom: 0;
   }
   .button {
-    color: $bg-color;
-    background-color: $link-color;
     height: 30px;
     padding: 0;
     line-height: 30px;

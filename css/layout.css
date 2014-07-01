@@ -27,6 +27,8 @@ p {
 a {
   color: #1baece;
   text-decoration: none; }
+  a:hover {
+    color: #5ac3dd; }
 
 ul, li, dl, dt, dd {
   list-style: none;
@@ -52,6 +54,9 @@ blockquote:after {
   font-weight: 700;
   padding: 0px 2rem;
   text-transform: uppercase; }
+  .button:hover {
+    color: white;
+    background-color: #5ac3dd; }
 
 .inverted {
   background-color: #282828;
@@ -424,8 +429,6 @@ section {
     text-transform: uppercase;
     margin-bottom: 0; }
   #jumplink .button {
-    color: white;
-    background-color: #1baece;
     height: 30px;
     padding: 0;
     line-height: 30px;
